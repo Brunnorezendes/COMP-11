@@ -1,0 +1,11 @@
+load('data.mat');
+grid on;
+hold on;
+[m, b] = identificarCruiseControl(data.f, data.t, data.v);
+plot(data.t, data.v);
+f = @(t)(data.f/b)*(1-exp(-b*t/m));
+plot(data.t, f(data.t));
+xlabel('Tempo (s)');
+ylabel('Velocidade (m/s)');
+title('Identificação do Sistema');
+legend('Experimento', 'Modelo');

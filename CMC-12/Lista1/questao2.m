@@ -1,0 +1,16 @@
+fa = 1;
+m = 1;
+k = 1;
+b = 1.4;
+Gamma = b/(2*m);
+w2 = k/m;
+w_ef = sqrt(w2-Gamma^2);
+f = @(t)(exp(-Gamma.*t).*(-cos(w_ef.*t)-(Gamma/w_ef).*sin(w_ef.*t))+(fa/k));
+figure;
+hold on;
+grid on;
+x = linspace(0, 10, 100);
+plot(x, f(x), 'b', 'LineWidth', 1);
+title('Gráfico da EDO da Questão 2');
+xlabel('t (Tempo)');
+ylabel('x (Posição)');

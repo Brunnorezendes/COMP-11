@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/ITA/COMP-11/CTC-12/Lab2/build/labTreetests[1]_tests.cmake")
+  include("/mnt/c/ITA/COMP-11/CTC-12/Lab2/build/labTreetests[1]_tests.cmake")
+else()
+  add_test(labTreetests_NOT_BUILT labTreetests_NOT_BUILT)
+endif()
