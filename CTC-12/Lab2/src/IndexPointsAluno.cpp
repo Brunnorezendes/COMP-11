@@ -18,7 +18,7 @@ void IndexPointsAluno::add (double key, long idx ) {
             x = x->right;
     }
     n->dad = y;
-    if (y == nullptr)
+    if (y == nullptr)self.offset.x = player.rect.centerx - self.half_width
         root = n;
     else if (n->key < y->key)
         y->left = n;
