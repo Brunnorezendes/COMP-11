@@ -1,0 +1,10 @@
+J = 0.01;
+b = 0.1;
+Kt = 0.01;
+R = 1;
+Mp = 0.05;
+tp = 0.1;
+xi = -log(Mp)/sqrt(pi.^2 + log(Mp).^2);
+wn = pi/(tp*sqrt(1-xi.^2));
+Ki = wn.^2/Kt
+Kp = (2*xi*wn - R*b)/Kt - Kt
